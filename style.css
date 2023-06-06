@@ -28,7 +28,8 @@ section {
   background-color: rgb(245, 245, 245);
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   background-color: #242424;
   color: #fff;
@@ -52,11 +53,13 @@ label {
   font-weight: bold;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #dcdfe6;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #f06449;
 }
 
@@ -74,6 +77,7 @@ input:focus, textarea:focus {
 
 .click {
   transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .click:hover {
@@ -269,10 +273,18 @@ MODAL
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal {
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 
 .modal__half {
@@ -281,10 +293,18 @@ MODAL
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -325,6 +345,7 @@ MODAL
 .modal__contact {
   background-color: #242424;
   color: white;
+  transform: translateX(110%);
 }
 
 .modal__title {
@@ -365,6 +386,58 @@ MODAL
 .form__submit:active {
   border-color: #f06449;
   color: #f06449;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.modal__overlay--loading {
+  background-color: #242424;
+  font-size: 80px;
+}
+
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+
+.modal__overlay--visible {
+  z-index: 1;
+  display: flex;
+}
+
+.fa-spinner {
+  animation: spinner 750ms infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 36px;
+  z-index: 100;
 }
 
 /* 
