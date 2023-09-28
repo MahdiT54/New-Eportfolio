@@ -61,12 +61,12 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title orange">I'm Mahdi.</h1>
+          <h1 class="title blue">I'm Mahdi.</h1>
           <p class="header__para">
-            I'm a <b class="orange">Frontend Software Engineer</b> with a strong
+            I'm a <b class="blue">Frontend Software Engineer</b> with a strong
             passion for building web applications with great user experiences.
             <br />
-            Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
+            Here's a bit more <b class="blue click" onclick="toggleModal()">about me</b>.
           </p>
           <div class="social__list">
             <a
@@ -113,14 +113,14 @@
           </h4>
           <p class="modal__para">
             I'm a 21 year-old American
-            <b class="orange">frontend software engineer</b> with a strong
+            <b class="blue">frontend software engineer</b> with a strong
             passion for developing websites with great
-            <b class="orange">user experiences.</b>
+            <b class="blue">user experiences.</b>
             <br />
             I currently work on extremely difficult engineering problems and
             learn from a team consisting of some of the most
-            <b class="orange">talented</b> and
-            <b class="orange">experienced</b> software engineers every day.
+            <b class="blue">talented</b> and
+            <b class="blue">experienced</b> software engineers every day.
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
@@ -212,7 +212,7 @@
       <div class="container">
         <div class="row">
           <h1 class="section__title">
-            Here are some of my <span class="orange">projects</span>
+            Here are some of my <span class="blue">projects</span>
           </h1>
           <ul class="project__list">
             <!-- movie api project -->
@@ -315,6 +315,49 @@
                 </div>
               </div>
             </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/Mahdiflix-site.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Netflix Clone
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    React.js, CSS3, TMDb API, Redux, 
+                    Firebase authentication, Stripe Payment Processing
+                  </h4>
+                  <p class="project__description--para">
+                    Beautiful UI / UX just like Netflix, with all information
+                    fetched from TMDb API.  Log in / Log out using Google Authentication.
+                    Stripe payment processor implemented for 3 subscription tiers.
+                    Using Cloud Firestore database and Stripe payment webhooks, this
+                    application is able to keep track of user subscriptions and their
+                    records in the database.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/MahdiT54/netflix-clone"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://netflix-clone-bx1iwzhc5-mahdit54.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -322,9 +365,15 @@
     <footer>
       <div class="container">
         <div class="row footer__row">
-          <figure>
-            <img class="footer__logo--img" src="./assets/mtlogo.png" alt="" />
-          </figure>
+          <a href="#" class="footer__anchor">
+            <figure>
+              <img class="footer__logo--img" src="./assets/mtlogo.png" alt="" />
+            </figure>
+            <span class="footer__logo--popper">
+              Top
+              <i class="fas fa-arrow-up"></i>
+            </span>
+          </a>
           <div class="footer__social--list">
             <a
               href="https://github.com/MahdiT54"
