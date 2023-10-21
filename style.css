@@ -198,6 +198,24 @@ LANDING PAGE
   padding: 0 30px;
 }
 
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__content--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__content--right-content {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
 .header__para {
   font-size: 24px;
   line-height: 2;
