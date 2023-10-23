@@ -740,6 +740,9 @@ footer {
 }
 /* Small phones */
 @media (max-width: 480px) {
+  .ml-form-embedHeader {
+    display: none;
+  }
   .title {
     font-size: 52px;
   }
