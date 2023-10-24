@@ -93,6 +93,20 @@ textarea:focus {
   transform: scale(0.8);
 }
 
+
+/*  */
+
+
+
+.about-me:hover {
+  letter-spacing: .1rem;
+}
+
+
+/*  */
+
+
+
 .title {
   font-size: 120px;
   margin-bottom: 12px;
