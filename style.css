@@ -93,19 +93,13 @@ textarea:focus {
   transform: scale(0.8);
 }
 
-
 /*  */
-
-
 
 .about-me:hover {
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
-
 /*  */
-
-
 
 .title {
   font-size: 120px;
@@ -210,6 +204,7 @@ LANDING PAGE
   width: 100%;
   max-width: 1000px;
   padding: 0 30px;
+  z-index: 99;
 }
 
 .header__content {
@@ -546,6 +541,8 @@ PROJECTS
 
 .project__img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: all 500ms ease;
 }
 
@@ -678,7 +675,7 @@ footer {
 
 .shape {
   position: fixed;
-  opacity: .6;
+  opacity: 0.6;
 }
 .shape--0 {
   top: 35vh;
